@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Subdivision Security System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">S.A.F.E</div>
+            <ul>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#location">Location</a></li> 
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+
+            <a href="c:\Users\drint\Downloads\SafeApp.apk" class="download-btn" download>Download</a>
+        </nav>
+        
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Welcome to Eastwood Villa</h1>
+                <h1>Ph.1 Subdivision San Isidro</h1>
+                <p>Experience next-gen security with face detection and QR scanning for convenient access control</p>
+            </div>
+        </section>
+    </header>
+ 
+    <section id="features" class="features-section">
+        <h2 class="section-title">Subdivision Features</h2>
+        <div class="features-grid">
+            <div class="feature-item">
+                <img src="facedetec.png" alt="Face Detection">
+                <h3>Face Detection</h3>
+                <p>Touch-free access with face detection technology.</p>
+            </div>
+            <div class="feature-item">
+                <img src="qrscan.png" alt="QR Code Scan">
+                <h3>QR Code Scanning</h3>
+                <p>Generate and scan personalized QR codes for visitors or deliveries.</p>
+            </div>
+            <div class="feature-item">
+                <img src="realtimemoni.jpg" alt="Real-Time Monitoring">
+                <h3>Real-Time Monitoring</h3>
+                <p>Monitor gate entries and exits in real-time through our mobile app.</p>
+            </div>
+            <div class="feature-item">
+                <img src="visitormanage.png" alt="Visitor Management">
+                <h3>Visitor Management</h3>
+                <p>Pre-authorize visitors for secure, hassle-free access.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="how-it-works-section">
+        <h2 class="section-title">How It Works</h2>
+        <div class="steps">
+            <div class="step">
+                <h3>Step 1: Approach The Guard</h3>
+                <p>Simply walk towards the <br> gate and talk to the assigned guard</p>
+                <img src="yessir.jpg" alt="Approach Gate">
+            </div>
+            <div class="step">
+                <p>The system instantly <br> verifies your identity for secure entry.</p>
+                <h3>Step 2: Face or QR Code Detection</h3>
+                <img src="faceqr.jpg" alt="Scan Face or QR">
+            </div>
+            <div class="step">
+                <h3>Step 3: Wait for Access</h3>
+                <p>The guard will verify your information for access</p>
+                <img src="nigguard.jpg" alt="Access Granted">
+            </div> 
+        </div>
+    </section>
+    
+    <section id="location" class="section location-box">
+        <h2 class="section-title">Locate Us</h2>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3858.287228635435!2d121.1607456755368!3d14.752841073330412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397a5f748d240cd%3A0x31e8e7faca86af8c!2sEastwood%20villa%20Ph.1%20subdivision%20San%20Isidro!5e0!3m2!1sen!2sph!4v1727674428212!5m2!1sen!2sph"
+                width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+    
+    <section id="contact" class="section contact">
+        <h2 class="section-title">Contact Us</h2>
+        <div class="contact-container">
+            <div class="infographic-placeholder">
+                <img src="contactus.jpg" alt="Infographic" class="infographic-image">
+            </div>
+            <form class="contact-form">
+                <input type="text" placeholder="Name" required>
+                <input type="text" placeholder="Contact" required>
+                <textarea placeholder="Message" rows="4" required></textarea>
+                <button type="submit" class="primary-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+    
+    
+    <footer>
+        <p>&copy; 2024 S.A.F.E All Rights Reserved. | Privacy Policy | Terms of Service</p>
+    </footer>
+
+    <button id="back-to-top-btn"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="script.js"></script>
+
+    <!-- Firebase SDKs -->
+<script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-database.js"></script>
+
+<!-- Firebase Configuration -->
+<script>
+    const firebaseConfig = {
+        apiKey: "AIzaSyAvK8zYg6qnZbyLoSYn4LLlTBokOlwe0zQ",
+        authDomain: "ourpreciouscapstone.firebaseapp.com",
+        databaseURL: "https://ourpreciouscapstone-default-rtdb.firebaseio.com",
+        projectId: "ourpreciouscapstone",
+        storageBucket: "ourpreciouscapstone.appspot.com",
+        messagingSenderId: "670160180575",
+        appId: "1:670160180575:web:a179ee71ee6fa0c146d2ea",
+        measurementId: "G-JLVZV3TD5G"
+    };
+
+    // Initialize Firebase
+    const app = firebase.initializeApp(firebaseConfig);
+    const database = firebase.database();
+</script>
+
+<script>
+    // Add event listener for form submission
+    document.querySelector('.contact-form').addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent the default form submission behavior
+
+        // Collect form data
+        const name = document.querySelector('input[placeholder="Name"]').value.trim();
+        const contact = document.querySelector('input[placeholder="Contact"]').value.trim();
+        const message = document.querySelector('textarea[placeholder="Message"]').value.trim();
+
+        // Validate form fields
+        if (!name || !contact || !message) {
+            alert('Please fill out all fields before submitting.');
+            return; // Stop further execution if validation fails
+        }
+
+        // Save data to Firebase Realtime Database
+        database.ref('contacts').push({
+            name: name,
+            contact: contact,
+            message: message,
+            timestamp: new Date().toISOString() // Optional: Add a timestamp for sorting or logging
+        }).then(() => {
+            alert('Your message has been sent successfully!');
+            
+            // Clear form fields
+            document.querySelector('.contact-form').reset(); // Resets all inputs in the form
+        }).catch((error) => {
+            console.error('Error:', error);
+            alert('Failed to send your message. Please try again.');
+        });
+    });
+</script>
+
+</body>
+</html>
